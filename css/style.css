@@ -1,13 +1,35 @@
 body {
-    background-color: #000;
-    color: #fff;
+    background-color: #fff;
+    color: #222;
 }
 
 .card {
-    background-color: #1e1e1e;
+    background-color: #f8f9fa;
 }
 
 .card img {
     max-width: 100%;
     height: auto;
+}
+
+/* Modo oscuro */
+body.dark-mode {
+    background-color: #000;
+    color: #fff;
+}
+
+body.dark-mode .card {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode p {
+    color: #fff;
+}
+
+body.dark-mode .card-footer h6 {
+    color: #8f8f8f;
+}
+
+body.dark-mode .card-header{
+    color: #fff;
 }

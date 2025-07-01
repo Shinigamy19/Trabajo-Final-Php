@@ -8,7 +8,7 @@
       <!-- Card 1 -->
       <div class="col-md-4 mb-4">
         <div class="card border-info h-100">
-          <div class="card-header">Pj</div>
+          <div class="card-header"><h4>Pj</h4></div>
           <div class="card-body text-center">
             <p>Usuario: Shinigamy19</p>
             <img src="img\pj.gif" alt="Pj">
@@ -16,7 +16,7 @@
             <a href="#" class="card-link">Ver Perfil del Artista</a>
           </div>
           <div class="card-footer text-muted">
-            Hace 2 días
+            <h6>Hace 2 días</h6>
           </div>
         </div>
       </div>
@@ -24,7 +24,7 @@
       <!-- Card 2 -->
       <div class="col-md-4 mb-4">
         <div class="card border-info h-100">
-          <div class="card-header">Copito</div>
+          <div class="card-header"><h4>Copito</h4></div>
           <div class="card-body text-center">
             <p>Usuario: Shinigamy19</p>
             <img src="img\copito.gif" alt="Copito">
@@ -32,7 +32,7 @@
             <a href="#" class="card-link">Ver Perfil del Artista</a>
           </div>
           <div class="card-footer text-muted">
-            Hace 2 días
+            <h6>Hace 2 días</h6>
           </div>
         </div>
       </div>
@@ -40,7 +40,7 @@
       <!-- Card 3 -->
       <div class="col-md-4 mb-4">
         <div class="card border-info h-100">
-          <div class="card-header">Ojo Volador</div>
+          <div class="card-header"><h4>Ojo Volador</h4></div>
           <div class="card-body text-center">
             <p>Usuario: Shinigamy19</p>
             <img src="img\ojovolador.gif" alt="Ojo Volador">
@@ -48,7 +48,7 @@
             <a href="#" class="card-link">Ver Perfil del Artista</a>
           </div>
           <div class="card-footer text-muted">
-            Hace 2 días
+            <h6>Hace 2 días</h6> 
           </div>
         </div>
       </div>

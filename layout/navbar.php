@@ -63,5 +63,10 @@
           <button class="btn btn-dark" type="submit">Buscar</button>
         </form>
       </div>
+      <!-- Switch Modo Claro/Oscuro -->
+      <div class="form-check form-switch ms-3">
+        <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+        <label class="form-check-label text-dark" for="darkModeSwitch">Modo oscuro</label>
+      </div>
     </div>
   </nav>
