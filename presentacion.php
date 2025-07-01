@@ -13,7 +13,7 @@
             </p>
             <ul>
                 <li>Sube tus <strong>imágenes pixeladas</strong>, <strong>paletas de colores</strong> o <strong>audios chiptune</strong>.</li>
-                <li>Explora y comenta las obras de otros usuarios.</li>
+                <li>Explora las obras de otros usuarios.</li>
                 <li>Conecta con artistas y músicos de todo el mundo.</li>
             </ul>
             <p>
