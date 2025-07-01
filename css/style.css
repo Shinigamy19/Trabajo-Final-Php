@@ -76,3 +76,8 @@ body.dark-mode .navbar .nav-link,
 body.dark-mode .card .card-body .card-title {
     color: #fff !important;
 }
+
+body.dark-mode .pixelart-title {
+    color: #fff;
+    text-shadow: 0 2px 8px #222;
+}

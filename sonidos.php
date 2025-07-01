@@ -1,7 +1,7 @@
 <?php include __DIR__ . '/layout/header.php'; ?>
 
 <div class="container my-5">
-  <h1>Pixel Art - Audios</h1>
+  <h1>Audios</h1>
   <div class="row">
     <?php
     include __DIR__ . '/db/conexion_local.php';

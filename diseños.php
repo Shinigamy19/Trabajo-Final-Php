@@ -7,7 +7,7 @@ $result = $con->query("SELECT * FROM publicaciones WHERE tipo='imagen' ORDER BY 
 ?>
 
 <div class="container my-5">
-  <h1>Pixel Art - Diseños</h1>
+  <h1>Diseños</h1>
   <div class="row">
     <?php while($pub = $result->fetch_assoc()): ?>
       <?php

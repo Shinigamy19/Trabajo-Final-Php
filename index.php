@@ -7,7 +7,7 @@ $result = $con->query("SELECT * FROM publicaciones ORDER BY fecha DESC");
 ?>
 
 <div class="container my-5">
-  <h1>Pixel Art</h1>
+  <h1>Publicaciones</h1>
   <div class="row">
     <?php while($pub = $result->fetch_assoc()): ?>
       <?php

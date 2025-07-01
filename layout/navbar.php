@@ -16,6 +16,7 @@
           <li class="nav-item"><a class="nav-link" href="diseños.php">Diseños</a></li>
           <li class="nav-item"><a class="nav-link" href="paletas.php">Paletas</a></li>
           <li class="nav-item"><a class="nav-link" href="sonidos.php">Sonidos</a></li>
+          <li class="nav-item"><a class="nav-link" href="dibujar.php">Dibujar</a></li>
       <?php    
       if(empty($_SESSION['username']))
 			{
