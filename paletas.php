@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . '/layout/header.php';
-include __DIR__ . '/db/conexion_local.php';
+include __DIR__ . '/db/conexion_servidor.php';
 
 // Solo publicaciones de tipo paleta
 $result = $con->query("SELECT * FROM publicaciones WHERE tipo='paleta' ORDER BY fecha DESC");

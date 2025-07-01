@@ -1,14 +1,12 @@
-<?php include __DIR__ . '/layout/header.php'; ?>
+<?php include __DIR__ . '/layout/header.php'; 
+include __DIR__ . '/db/conexion_servidor.php';?>
 
 <div class="container my-5">
   <h1>Audios</h1>
   <div class="row">
     <?php
-    include __DIR__ . '/db/conexion_local.php';
-    // Solo publicaciones de tipo audio
     $result = $con->query("SELECT * FROM publicaciones WHERE tipo='audio' ORDER BY fecha DESC");
     while($pub = $result->fetch_assoc()):
-        // Obtener la foto de perfil del usuario
         $stmt = $con->prepare("SELECT user_img FROM usuarios WHERE username=?");
         $stmt->bind_param("s", $pub['usuario']);
         $stmt->execute();

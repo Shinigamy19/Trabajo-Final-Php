@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . '/layout/header.php';
-include __DIR__ . '/db/conexion_local.php';
+include __DIR__ . '/db/conexion_servidor.php';
 
 if (!isset($_SESSION['username'])) {
     echo '<div class="container mt-5"><div class="alert alert-danger">Debes iniciar sesión para ver tu perfil.</div></div>';

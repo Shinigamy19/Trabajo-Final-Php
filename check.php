@@ -1,6 +1,6 @@
 <?php 
 include __DIR__ . '/layout/header.php'; 
-include __DIR__ . 'db/conexion_local.php'; 
+include __DIR__ . '/../db/conexion_servidor.php';
     
     if(isset($_POST['enviar'])) //si se enviaron los datos ->
     {  // comprobamos que los campos usuarios_nombre y usuario_clave no estén vacíos 

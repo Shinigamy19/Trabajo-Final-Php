@@ -1,5 +1,5 @@
-  <?php
-  include __DIR__ . '/../db/conexion_local.php';
+<?php
+include dirname(__DIR__) . '/db/conexion_servidor.php';
   ?>
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-info">
@@ -27,7 +27,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="login.php">Ingresar</a></li>
-              <li><a class="dropdown-item" href="register.php">Registrarte</a></li>
+              <li><a class="dropdown-item" href="registro.php">Registrarte</a></li>
             </ul>
           </li>
         </ul>

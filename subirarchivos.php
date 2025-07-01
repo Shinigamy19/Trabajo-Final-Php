@@ -1,6 +1,6 @@
 <?php
 include __DIR__ . '/layout/header.php';
-include __DIR__ . '/db/conexion_local.php';
+include __DIR__ . '/db/conexion_servidor.php';
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {

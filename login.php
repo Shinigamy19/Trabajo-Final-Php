@@ -6,6 +6,7 @@ if (empty($_SESSION['username'])) {
 ?>
     <div class="container">
         <br></br>
+        <div class="row justify-content-center">
         <div class="card border-dark">
             <div class="card-header">
                 <h4 class="text-center">Ingresar</h4>
@@ -32,6 +33,7 @@ if (empty($_SESSION['username'])) {
                 </form>
             </div>
         </div>
+        </div>
     </div>
 
 <?php
@@ -39,11 +41,7 @@ if (empty($_SESSION['username'])) {
 ?>
     <div class="container">
         <br></br>
-        <div class="row">
-            <div class="col-md-4">
-
-            </div>
-
+        <div class="row justify-content-center">
             <div class="col-md-4">
 
                 <div class="card border-primary">
