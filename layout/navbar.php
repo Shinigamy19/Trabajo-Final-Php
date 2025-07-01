@@ -40,19 +40,31 @@
               Tu Cuenta
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Perfil</a></li>
-              <li><a class="dropdown-item" href="#">Configuración</a></li>
-              <li><a class="dropdown-item" href="#">Cerrar sesión</a></li>
+              <li><a class="dropdown-item" href="perfil.php">Perfil</a></li>
+              <li><a class="dropdown-item" href="subirarchivos.php">Subir Archivo</a></li>
+              <li><a class="dropdown-item" href="opciones.php">Configuración</a></li>
+              <div class="dropdown-divider"></div>
+              <li><a class="dropdown-item" href="logout.php">Cerrar sesión</a></li>
             </ul>
           </li>
         </ul>
         <?php
         }
+        if (!empty($_SESSION['username'])) {
+          $username = $_SESSION['username'];
+          $sql = "SELECT rango FROM usuarios WHERE username = ?";
+          $stmt = $con->prepare($sql);
+          $stmt->bind_param("s", $username);
+          $stmt->execute();
+          $stmt->bind_result($rango);
+          $stmt->fetch();
+          $stmt->close();
+        }
         if ($rango=="255") //255 es el administrador
 				{
           ?>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link active" href="#">Administrar</a></li>
+          <li class="nav-item"><a class="nav-link active" href="administrar.php">Administrar</a></li>
         </ul>
         <?php
         }

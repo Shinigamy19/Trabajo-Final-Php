@@ -19,6 +19,14 @@ audio {
     padding: 4px;
 }
 
+.navbar .nav-link,
+.navbar .navbar-brand {
+    color: #000 !important;
+}
+
+.card.border-info .btn-info {
+    color: #fff !important;
+}
 
 /* Modo oscuro */
 body.dark-mode {
@@ -58,4 +66,9 @@ body.dark-mode label,
 body.dark-mode .form-check-label,
 body.dark-mode .form-label {
     color: #828eff;
+}
+
+body.dark-mode .navbar .nav-link,
+.navbar .navbar-brand {
+    color: #ffffff !important;
 }
