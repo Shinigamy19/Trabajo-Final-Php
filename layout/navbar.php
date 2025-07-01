@@ -4,7 +4,7 @@
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-info">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Pixelate</a>
+      <a class="navbar-brand" href="presentacion.php">Pixelate</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
         data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
         aria-expanded="false" aria-label="Toggle navigation">
