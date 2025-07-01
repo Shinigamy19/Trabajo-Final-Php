@@ -83,3 +83,10 @@ body.dark-mode .pixelart-title {
     color: #fff;
     text-shadow: 0 2px 8px #222;
 }
+
+body.dark-mode .text-muted,
+.dark-mode .text-muted,
+body.dark-mode small.text-muted,
+.dark-mode small.text-muted {
+    color: #b0b0b0 !important;
+}

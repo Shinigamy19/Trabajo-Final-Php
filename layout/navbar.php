@@ -75,10 +75,10 @@ include dirname(__DIR__) . '/db/conexion_servidor.php';
         <input class="form-check-input" type="checkbox" id="darkModeSwitch">
         <label class="form-check-label text-dark" for="darkModeSwitch">Modo oscuro</label>
       </div>
-        <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Buscar">
-          <button class="btn btn-dark" type="submit">Buscar</button>
-        </form>
+      <form class="d-flex" action="buscar.php" method="get">
+        <input class="form-control me-2" type="search" name="q" placeholder="Buscar publicaciones" required>
+        <button class="btn btn-dark" type="submit">Buscar</button>
+      </form>
       </div>
     </div>
   </nav>
