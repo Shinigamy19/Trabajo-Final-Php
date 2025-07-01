@@ -90,3 +90,20 @@ body.dark-mode small.text-muted,
 .dark-mode small.text-muted {
     color: #b0b0b0 !important;
 }
+
+body.dark-mode .user-link,
+.dark-mode .user-link {
+    color: #7ecbff !important;
+    text-decoration: underline;
+}
+body.dark-mode .user-link-btn,
+.dark-mode .user-link-btn {
+    border-color: #7ecbff !important;
+    color: #7ecbff !important;
+    background: transparent !important;
+}
+body.dark-mode .user-link-btn:hover,
+.dark-mode .user-link-btn:hover {
+    background: #222 !important;
+    color: #fff !important;
+}
