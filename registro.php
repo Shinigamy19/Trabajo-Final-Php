@@ -62,7 +62,8 @@ if (isset($_POST['enviar'])) {
             <?php
         } else {
             $user_pass = md5($user_pass);
-            $reg = "INSERT INTO usuarios (username,pw_md5,mail,reg_time) VALUES('" . $user_name . "','" . $user_pass . "', '" . $user_mail . "', NOW())";
+            $default_img = 'img/perfiles/default.png';
+            $reg = "INSERT INTO usuarios (username,pw_md5,mail,reg_time,user_img) VALUES('" . $user_name . "','" . $user_pass . "', '" . $user_mail . "', NOW(), '$default_img')";
             if ($con->query($reg) === TRUE) {
             ?>
                 <div class="container">

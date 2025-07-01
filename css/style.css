@@ -72,3 +72,7 @@ body.dark-mode .navbar .nav-link,
 .navbar .navbar-brand {
     color: #ffffff !important;
 }
+
+body.dark-mode .card .card-body .card-title {
+    color: #fff !important;
+}

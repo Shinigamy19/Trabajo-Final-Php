@@ -9,11 +9,24 @@ $result = $con->query("SELECT * FROM publicaciones ORDER BY fecha DESC");
   <h1>Pixel Art</h1>
   <div class="row">
     <?php while($pub = $result->fetch_assoc()): ?>
+      <?php
+        // Obtener la foto de perfil del usuario
+        $stmt = $con->prepare("SELECT user_img FROM usuarios WHERE username=?");
+        $stmt->bind_param("s", $pub['usuario']);
+        $stmt->execute();
+        $stmt->bind_result($user_img);
+        $stmt->fetch();
+        $stmt->close();
+        $foto = $user_img ? htmlspecialchars($user_img) : 'img/perfiles/default.png';
+      ?>
       <div class="col-md-4 mb-4">
         <div class="card border-info h-100">
           <div class="card-header"><h4><?= htmlspecialchars($pub['titulo']) ?></h4></div>
           <div class="card-body text-center">
-            <p>Usuario: <?= htmlspecialchars($pub['usuario']) ?></p>
+            <h5 class="card-title">
+              <img src="<?= $foto ?>" alt="Perfil" class="rounded-circle me-2" style="width:32px;height:32px;object-fit:cover;vertical-align:middle;">
+               <?= htmlspecialchars($pub['usuario']) ?>
+            </h5>
             <?php if($pub['tipo'] == 'imagen'): ?>
               <img src="<?= htmlspecialchars($pub['archivo']) ?>" alt="<?= htmlspecialchars($pub['titulo']) ?>" style="max-width:100%;">
             <?php elseif($pub['tipo'] == 'paleta'): ?>
