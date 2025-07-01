@@ -1,59 +1,47 @@
-<?php include __DIR__ . '/layout/header.php'; ?>
+<?php
+include __DIR__ . '/layout/header.php';
+include __DIR__ . '/db/conexion_local.php';
 
+// Solo publicaciones de tipo paleta
+$result = $con->query("SELECT * FROM publicaciones WHERE tipo='paleta' ORDER BY fecha DESC");
+?>
 
-  <!-- CONTENIDO -->
-  <div class="container my-5">
-    <h1>Pixel Art</h1>
-    <div class="row">
-      <!-- Card 1 -->
+<div class="container my-5">
+  <h1>Pixel Art - Paletas</h1>
+  <div class="row">
+    <?php while($pub = $result->fetch_assoc()): ?>
+      <?php
+        // Obtener la foto de perfil del usuario
+        $stmt = $con->prepare("SELECT user_img FROM usuarios WHERE username=?");
+        $stmt->bind_param("s", $pub['usuario']);
+        $stmt->execute();
+        $stmt->bind_result($user_img);
+        $stmt->fetch();
+        $stmt->close();
+        $foto = $user_img ? htmlspecialchars($user_img) : 'img/perfiles/default.png';
+      ?>
       <div class="col-md-4 mb-4">
         <div class="card border-info h-100">
-          <div class="card-header"><h4>Pj</h4></div>
+          <div class="card-header">
+            <h4><?= htmlspecialchars($pub['titulo']) ?></h4>
+            <span class="badge bg-secondary">Paleta</span>
+          </div>
           <div class="card-body text-center">
-            <p>Usuario: Shinigamy19</p>
-            <img src="img\paleta_pj.png" alt="Pj">
-            <p class="mt-2">Sprite de personaje principal.</p>
-            <a href="#" class="card-link">Ver Perfil del Artista</a>
+            <h5 class="card-title">
+              <img src="<?= $foto ?>" alt="Perfil" class="rounded-circle me-2" style="width:32px;height:32px;object-fit:cover;vertical-align:middle;">
+              <?= htmlspecialchars($pub['usuario']) ?>
+            </h5>
+            <img src="<?= htmlspecialchars($pub['archivo']) ?>" alt="<?= htmlspecialchars($pub['titulo']) ?>" style="max-width:100%;">
+            <p class="mt-2"><?= htmlspecialchars($pub['descripcion']) ?></p>
+            <a href="perfil_publico.php?user=<?= urlencode($pub['usuario']) ?>" class="card-link">Ver Perfil del Artista</a>
           </div>
           <div class="card-footer text-muted">
-            <h6>Hace 2 días</h6>
+            <h6><?= date('d/m/Y H:i', strtotime($pub['fecha'])) ?></h6>
           </div>
         </div>
       </div>
-
-      <!-- Card 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card border-info h-100">
-          <div class="card-header"><h4>Paleta Copito</h4></div>
-          <div class="card-body text-center">
-            <p>Usuario: Shinigamy19</p>
-            <img src="img\paleta_copito.png" alt="Copito">
-            <p class="mt-2">Copito personaje secundario que ayuda a Pj.</p>
-            <a href="#" class="card-link">Ver Perfil del Artista</a>
-          </div>
-          <div class="card-footer text-muted">
-            <h6>Hace 2 días</h6>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card border-info h-100">
-          <div class="card-header"><h4>Paleta Ojo Volador</h4></div>
-          <div class="card-body text-center">
-            <p>Usuario: Shinigamy19</p>
-            <img src="img\paleta_ojo.png" alt="Ojo Volador">
-            <p class="mt-2">Ojo volador enemigo de Pj.</p>
-            <a href="#" class="card-link">Ver Perfil del Artista</a>
-          </div>
-          <div class="card-footer text-muted">
-            <h6>Hace 2 días</h6> 
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php endwhile; ?>
   </div>
-
+</div>
 
 <?php include __DIR__ . '/layout/footer.php'; ?>

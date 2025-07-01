@@ -1,4 +1,5 @@
 <?php
+
 include __DIR__ . '/layout/header.php';
 include __DIR__ . '/db/conexion_local.php';
 
@@ -18,10 +19,24 @@ $result = $con->query("SELECT * FROM publicaciones ORDER BY fecha DESC");
         $stmt->fetch();
         $stmt->close();
         $foto = $user_img ? htmlspecialchars($user_img) : 'img/perfiles/default.png';
+
+        // Determinar la categoría
+        if ($pub['tipo'] == 'imagen') {
+          $categoria = 'Diseño';
+        } elseif ($pub['tipo'] == 'paleta') {
+          $categoria = 'Paleta';
+        } elseif ($pub['tipo'] == 'audio') {
+          $categoria = 'Audio';
+        } else {
+          $categoria = ucfirst($pub['tipo']);
+        }
       ?>
       <div class="col-md-4 mb-4">
         <div class="card border-info h-100">
-          <div class="card-header"><h4><?= htmlspecialchars($pub['titulo']) ?></h4></div>
+          <div class="card-header">
+            <h4><?= htmlspecialchars($pub['titulo']) ?></h4>
+            <span class="badge bg-secondary"><?= $categoria ?></span>
+          </div>
           <div class="card-body text-center">
             <h5 class="card-title">
               <img src="<?= $foto ?>" alt="Perfil" class="rounded-circle me-2" style="width:32px;height:32px;object-fit:cover;vertical-align:middle;">

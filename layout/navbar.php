@@ -13,7 +13,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" href="diseños.php">Pixel Art</a></li>
+          <li class="nav-item"><a class="nav-link" href="diseños.php">Diseños</a></li>
           <li class="nav-item"><a class="nav-link" href="paletas.php">Paletas</a></li>
           <li class="nav-item"><a class="nav-link" href="sonidos.php">Sonidos</a></li>
       <?php    
