@@ -227,6 +227,12 @@ function downloadImage() {
     link.click();
 }
 
+function clearLayer() {
+    const ctx = layers[activeLayer].getContext('2d');
+    ctx.clearRect(0, 0, canvasSize, canvasSize);
+    renderCanvas();
+}
+
 // Inicialización
 document.addEventListener('DOMContentLoaded', () => {
     // Crear la primera capa
@@ -260,8 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     document.getElementById('download').addEventListener('click', downloadImage);
-
-    
+    document.getElementById('clearLayer').addEventListener('click', clearLayer);
     document.getElementById('undo').addEventListener('click', undo);
     document.getElementById('redo').addEventListener('click', redo);
 });

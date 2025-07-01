@@ -1,14 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const switchInput = document.getElementById('darkModeSwitch');
     const body = document.body;
+    const darkMode = localStorage.getItem('darkMode');
 
-    if (!switchInput) return; // Evita errores si el switch no existe
-
-    // Inicializar el switch según preferencia guardada
-    if (localStorage.getItem('darkMode') === 'on') {
+    if (darkMode === 'on') {
         body.classList.add('dark-mode');
-        switchInput.checked = true;
+    } else {
+        body.classList.remove('dark-mode');
     }
+
+    const switchInput = document.getElementById('darkModeSwitch');
+    if (!switchInput) return;
+
+    switchInput.checked = darkMode === 'on';
 
     switchInput.addEventListener('change', function () {
         if (this.checked) {

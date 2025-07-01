@@ -20,6 +20,7 @@
                     <select id="layerSelect" class="form-select form-select-sm mb-2" style="width:auto;"></select>
                     <button id="addLayer" class="btn btn-success btn-sm w-100 mb-2">Agregar Capa</button>
                     <button id="removeLayer" class="btn btn-danger btn-sm w-100 mb-2">Eliminar Capa</button>
+                    <button id="clearLayer" class="btn btn-secondary btn-sm w-100 mb-2">Limpiar Capa</button>
                     <label for="colorPicker" class="form-label mt-2">Color:</label>
                     <input type="color" id="colorPicker" value="#000000" class="mb-2">
                     
