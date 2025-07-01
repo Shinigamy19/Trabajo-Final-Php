@@ -12,6 +12,14 @@ body {
     height: auto;
 }
 
+audio {
+    background: #505050;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 4px;
+}
+
+
 /* Modo oscuro */
 body.dark-mode {
     background-color: #000;
@@ -32,4 +40,11 @@ body.dark-mode .card-footer h6 {
 
 body.dark-mode .card-header{
     color: #fff;
+}
+
+body.dark-mode audio {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    padding: 4px;
 }
