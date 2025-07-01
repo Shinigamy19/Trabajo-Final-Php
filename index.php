@@ -22,7 +22,7 @@ $result = $con->query("SELECT * FROM publicaciones ORDER BY fecha DESC");
               <audio controls src="<?= htmlspecialchars($pub['archivo']) ?>"></audio>
             <?php endif; ?>
             <p class="mt-2"><?= htmlspecialchars($pub['descripcion']) ?></p>
-            <a href="#" class="card-link">Ver Perfil del Artista</a>
+            <a href="perfil_publico.php?user=<?= urlencode($pub['usuario']) ?>" class="card-link">Ver Perfil del Artista</a>
           </div>
           <div class="card-footer text-muted">
             <h6><?= date('d/m/Y H:i', strtotime($pub['fecha'])) ?></h6>
