@@ -33,7 +33,12 @@ body.dark-mode .card {
 body.dark-mode p {
     color: #fff;
 }
-
+body.dark-mode h2 {
+    color: #fff;
+}
+body.dark-mode h4 {
+    color: #828eff;
+}
 body.dark-mode .card-footer h6 {
     color: #8f8f8f;
 }
@@ -43,8 +48,14 @@ body.dark-mode .card-header{
 }
 
 body.dark-mode audio {
-    background-color: #f8f9fa;
+    background-color: #87c2fd;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     padding: 4px;
+}
+
+body.dark-mode label,
+body.dark-mode .form-check-label,
+body.dark-mode .form-label {
+    color: #828eff;
 }

@@ -25,8 +25,8 @@
               Tu Cuenta
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Ingresar</a></li>
-              <li><a class="dropdown-item" href="#">Registrarte</a></li>
+              <li><a class="dropdown-item" href="login.php">Ingresar</a></li>
+              <li><a class="dropdown-item" href="register.php">Registrarte</a></li>
             </ul>
           </li>
         </ul>
@@ -57,15 +57,15 @@
         <?php
         }
         ?>
+         <!-- Switch Modo Claro/Oscuro -->
+      <div class="form-check form-switch me-3">
+        <input class="form-check-input" type="checkbox" id="darkModeSwitch">
+        <label class="form-check-label text-dark" for="darkModeSwitch">Modo oscuro</label>
+      </div>
         <form class="d-flex">
           <input class="form-control me-2" type="search" placeholder="Buscar">
           <button class="btn btn-dark" type="submit">Buscar</button>
         </form>
-      </div>
-      <!-- Switch Modo Claro/Oscuro -->
-      <div class="form-check form-switch ms-3">
-        <input class="form-check-input" type="checkbox" id="darkModeSwitch">
-        <label class="form-check-label text-dark" for="darkModeSwitch">Modo oscuro</label>
       </div>
     </div>
   </nav>
